@@ -1,4 +1,7 @@
-import 'package:app_1/screen/home_screen.dart';
+
+import 'package:app_1/pages/first_page.dart';
+import 'package:app_1/pages/second_page.dart';
+//import 'package:app_1/screen/new.dart';
 import 'package:flutter/material.dart';
 
 void main(){
@@ -6,16 +9,21 @@ void main(){
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
-
+  const MyApp({super.key});
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Navigation',
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const HomeScreen(),
+      home: const first_page(),
+      routes: {
+        '/first': (context) => const first_page(),
+        '/second': (context) => const second_page(),
+      },
     );
+
+ 
   }
 }

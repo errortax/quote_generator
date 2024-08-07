@@ -4,7 +4,7 @@ import 'package:app_1/screen/second_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatelessWidget {
-  const HomeScreen({Key? key}) : super(key: key);
+  const HomeScreen({super.key});
     
   @override
   Widget build(BuildContext context) {
